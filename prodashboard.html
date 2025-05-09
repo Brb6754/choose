@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#profile">Perfil</a></li>
+                <li><a href="#courses">Cursos</a></li>
+                <li><a href="#opportunities">Oportunidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Top Section: Profile and Notifications -->
+        <div class="top-section">
+            <!-- Perfil -->
+            <section class="profile">
+                <div class="profile-container">
+                    <div class="cv-preview">
+                        <div class="cv-header">
+                            <img id="cv-photo" src="images/logoColor.svg" alt="Foto de perfil" class="profile-photo">
+                            <div class="cv-title">
+                                <h1 id="cv-name">Tu nombre aquí</h1>
+                                <h2 id="cv-profession">Profesión</h2>
+                            </div>
+                        </div>
+                        <div class="cv-contact">
+                            <div class="contact-item">
+                                <span class="contact-label">Teléfono:</span>
+                                <span id="cv-phone"></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Correo:</span>
+                                <span id="cv-email"></span>
+                            </div>
+                        </div>
+                        <div class="cv-contact">
+                            <div class="contact-item">
+                                <span class="contact-label">Estado:</span>
+                                <span id="cv-state"></span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Ciudad:</span>
+                                <span id="cv-city"></span>
+                            </div>
+                        </div>
+                        <div class="cv-experience">
+                            <h3>Experiencia</h3>
+                            <ul id="cv-experience-list">
+                                <li>Escribe tu experiencia...</li>
+                            </ul>
+                        </div>
+                        <div class="cv-experience">
+                            <h3>Habilidades</h3>
+                            <ul id="cv-habilities-list">
+                                <li>Escribe tus habilidades...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notificaciones y Chat -->
+            <section class="notifications">
+                <h2>Notificaciones</h2>
+                <div class="notifications-container">
+                    <div class="notifications-left" id="notifications-left"></div>
+                    <div class="notifications-right" id="notifications-right"></div>
+                </div>
+                <div class="chat-section">
+                    <h3>ChooseAI</h3>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="chat-message assistant">
+                            <p>¡Hola! Soy ChooseAI. ¿Cómo puedo ayudarte hoy?</p>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                        <button id="chat-send">Enviar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bottom Section: Courses and Opportunities -->
+        <div class="bottom-section">
+            <!-- Cursos -->
+            <section class="courses">
+                <h2>Cursos Disponibles</h2>
+               <div id="courses-list"></div>
+            </section>
+
+            <!-- Oportunidades -->
+            <section class="opportunities">
+                <h2>Cuadro de Oportunidades</h2>
+                <div id="opportunities-list"></div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Dashboard. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacidad</a>
+                <a href="#terms">Términos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/prodashboard.js"></script>
+</body>
+</html>
