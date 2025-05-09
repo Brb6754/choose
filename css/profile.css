@@ -1,0 +1,327 @@
+/* General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(145deg, #0044c1, #001465);
+    color: white;
+    padding-top: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* Secciones */
+.form-section, .cv-preview {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.form-section:hover, .cv-preview:hover {
+    transform: translateY(-5px);
+}
+
+input, textarea {
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+/* Profession Group */
+.profession-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+}
+
+.add-degree-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #e30858;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-degree-btn:hover {
+    background-color: #b80646;
+}
+
+/* Degree Input */
+.degree-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+}
+
+.degree-input input {
+    flex: 1;
+}
+
+.remove-degree-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-degree-btn:hover {
+    background-color: #cc0000;
+}
+
+/* CV Preview */
+.cv-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cv-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e30858;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cv-title h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cv-title h2 {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+    color: #e30858;
+    font-weight: 600;
+}
+
+.cv-degrees {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.cv-degrees p {
+    margin: 5px 0;
+}
+
+/* CV Contact */
+.cv-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.cv-contact span {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* CV Experience */
+.cv-experience {
+    padding: 15px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.cv-experience h3 {
+    font-size: 1.3rem;
+    margin: 0 0 10px;
+    color: #e30858;
+}
+
+.cv-experience ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-experience li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.cv-experience li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #e30858;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 93%;
+    margin-top: 10px;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 91, 0.6);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Trigger area for header */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 999;
+}
+
+.logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e30858;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: rgba(0,0,91,0.6);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
+/* Photo Upload */
+.photo-upload {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ccc;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.photo-upload p {
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.photo-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
