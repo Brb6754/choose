@@ -7,14 +7,14 @@ const coursesData = [
 
 // Simulación de datos dinámicos para las oportunidades
 const opportunitiesData = [
-    { title: "Desarrollador Frontend", description: "Empresa XYZ busca un desarrollador frontend con experiencia en React.", image: "images/curso3.svg" },
-    { title: "Analista de Datos", description: "Oportunidad en compañía líder para analista con conocimientos en Python.", image: "images/curso2.svg" }
+    { title: "Universidad Panamericana", description: "Status: Aceptado, Beca: 50%", image: "images/up.png" },
+    { title: "Universidad Autonoma de Aguagascalientes", description:"Status: Rechazado, Beca: 20%", image: "images/uaa.jpeg" }
 ];
 
 // Simulación de datos dinámicos para las notificaciones
 const notificationsData = [
     { message: "Nuevo curso de Python disponible." },
-    { message: "Tu aplicación para Desarrollador Frontend ha sido recibida." },
+    { message: "Tu Universidad ha actauliza tu coursework." },
     { message: "Recordatorio: Completar perfil para acceder a más oportunidades." },
     { message: "Evento de networking próximo viernes." }
 ];

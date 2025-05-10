@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/predashboard.css">
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
     </header>
 
     <div class="dashboard-container">
-        <!-- Top Section: Profile and Notifications -->
+        <!-- Top Section: Profile, Button, and Notifications -->
         <div class="top-section">
             <!-- Perfil -->
             <section class="profile">
@@ -72,8 +72,13 @@
                 </div>
             </section>
 
-            <!-- Notificaciones y Chat -->
+            
+
+            <!-- Notificaciones -->
             <section class="notifications">
+                <div class="vocational-button-container">
+                    <button class="vocational-button" onclick="startVocationalProcess()">Inicia tu proceso de orientación vocacional</button>
+                </div>
                 <h2>Notificaciones</h2>
                 <div class="notifications-container">
                     <div class="notifications-left" id="notifications-left"></div>
@@ -84,16 +89,15 @@
 
         <!-- Bottom Section: Courses and Opportunities -->
         <div class="bottom-section">
+
+            <section class="opportunities">
+                <h2>Tus Aplicaciones a Universidades</h2>
+                <div id="opportunities-list"></div>
+            </section>
             <!-- Cursos -->
             <section class="courses">
                 <h2>Cursos Disponibles</h2>
-               <div id="courses-list"></div>
-            </section>
-
-            <!-- Oportunidades -->
-            <section class="opportunities">
-                <h2>Cuadro de Oportunidades</h2>
-                <div id="opportunities-list"></div>
+                <div id="courses-list"></div>
             </section>
         </div>
     </div>
@@ -109,6 +113,7 @@
         </div>
     </footer>
 
-    <script src="js/prodashboard.js"></script>
+    <script src="js/predashboard.js"></script>
+</body>
 </body>
 </html>
