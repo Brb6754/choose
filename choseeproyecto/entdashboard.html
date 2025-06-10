@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Empresa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="entprofile.html">Perfil</a></li>
+                <li><a href="#">Vacantes</a></li>
+                <li><a href="#">Candidatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="top-section">
+            <div class="profile-container">
+                <div class="cv-preview">
+                    <div class="cv-header">
+                        <img id="cv-logo" src="images/company-logo.jpg" class="profile-photo" alt="Logo de la empresa">
+                        <div class="cv-title">
+                            <h1 id="cv-name">Nombre de la empresa</h1>
+                            <h2 id="cv-industry">Industria</h2>
+                        </div>
+                    </div>
+                    <div class="cv-contact">
+                        <div class="contact-item">
+                            <span class="contact-label">Teléfono:</span>
+                            <span id="cv-phone"></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Correo:</span>
+                            <span id="cv-email"></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Estado:</span>
+                            <span id="cv-state"></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Ciudad:</span>
+                            <span id="cv-city"></span>
+                        </div>
+                    </div>
+                    <div class="cv-experience">
+                        <h3>Descripción</h3>
+                        <p id="cv-description">Escribe la descripción de la empresa...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="notifications">
+                <h2>Notificaciones</h2>
+                <div class="notifications-container">
+                    <div class="notifications-left" id="notifications-left"></div>
+                    <div class="notifications-right" id="notifications-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="form-section">
+                <h2>Publicar Nueva Vacante</h2>
+                <form id="vacancy-form">
+                    <input type="text" id="vacancy-title" placeholder="Título de la vacante" required>
+                    <textarea id="vacancy-description" placeholder="Descripción de la vacante" rows="5" required></textarea>
+                    <input type="text" id="vacancy-category" placeholder="Categoría (e.g., Tecnología, Marketing)" required>
+                    <button type="submit" class="btn">Publicar Vacante</button>
+                </form>
+            </div>
+            <div class="opportunities">
+                <h2>Vacantes Publicadas</h2>
+                <div id="vacancy-list"></div>
+            </div>
+            <div class="courses">
+                <h2>Candidatos Postulados</h2>
+                <div id="applicants-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Dashboard. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="entdashboard.js"></script>
+</body>
+</html>

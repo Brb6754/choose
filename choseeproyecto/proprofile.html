@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose</title>
+  <link rel="stylesheet" href="css/profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-content"> 
+    <header>
+      <div class="logo">
+        <img src="images/logo.svg" alt="Mi Logo">
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="form-section">
+        <h2>Crea tu perfil</h2>
+        <div class="photo-upload" id="photo-upload">
+          <p>Sube tu foto aquí</p>
+          <input type="file" id="photo" accept="image/*" style="display: none;">
+          <img id="form-photo" src="" alt="Foto de perfil" style="display: none;">
+        </div>
+        <input type="text" id="name" placeholder="Tu nombre">
+        <input type="text" id="profession" placeholder="Profesión">
+        <input type="text" id="phone" placeholder="Teléfono">
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="text" id="state" placeholder="Estado">
+        <input type="text" id="city" placeholder="Ciudad">
+        <textarea id="experience" placeholder="Experiencia profesional"></textarea>
+        <textarea id="habilities" placeholder="Habilidades"></textarea>
+      </div>
+
+      <div class="cv-preview">
+        <div class="cv-header">
+          <img id="cv-photo" src="" alt="" class="profile-photo">
+          <div class="cv-title">
+            <h1 id="cv-name">Tu nombre aquí</h1>
+            <h2 id="cv-profession">Profesión</h2>
+          </div>
+        </div>
+        <div class="cv-contact">
+          <div class="contact-item">
+            <span class="contact-label">Teléfono:</span>
+            <span id="cv-phone"></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Correo:</span>
+            <span id="cv-email"></span>
+          </div>
+        </div>
+        <div class="cv-contact">
+          <div class="contact-item">
+            <span class="contact-label">Estado:</span>
+            <span id="cv-state"></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Ciudad:</span>
+            <span id="cv-city"></span>
+          </div>
+        </div>
+        <div class="cv-experience">
+          <h3>Experiencia</h3>
+          <ul id="cv-experience-list">
+            <li>Escribe tu experiencia...</li>
+          </ul>
+        </div>
+        <div class="cv-experience">
+          <h3>Habilidades</h3>
+          <ul id="cv-habilities-list">
+            <li>Escribe tus habilidades...</li>
+          </ul>
+        </div>
+        <a href="prodashboard.html"><button type="submit" class="button">Guardar</button></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Choose. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/profile.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93839d305811e14d',t:'MTc0NTk4MDE5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

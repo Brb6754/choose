@@ -1,0 +1,250 @@
+/* General */
+body {
+  background: linear-gradient(145deg, #0044c1, #001465);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: row; /* Default for desktop */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  padding: 20px 15px; /* Reduced side padding for desktop */
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  margin-left: 0; /* Ensures no extra space on the left, pulling the logo to the left edge */
+  margin-right: 120px; /* Increased to push logo further left */
+}
+
+/* Logo Image */
+.logo img {
+  height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Added to style the text-based logo (retained from previous) */
+.logo-text {
+  font-size: clamp(3rem, 6vw, 5rem); /* Match the size in the image */
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+/* Login Container */
+.login-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 25px; /* Reduced side padding for desktop */
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
+}
+
+input {
+  width: 100%; /* Full width for consistency */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+button {
+  width: 100%; /* Full width for consistency */
+  padding: 15px;
+  background: #e30858;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  touch-action: manipulation;
+  min-height: 48px;
+}
+
+button:hover {
+  background: #00bcd4;
+}
+
+/* Company Login Link */
+.company-login-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 30px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.company-login-link:hover {
+  color: #e30858;
+}
+
+/* Responsive Design */
+
+/* Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px; /* Reduced side padding */
+  }
+
+  .logo {
+    margin-left: 0; /* Reset for column layout */
+    margin-right: 0; /* Reset for column layout */
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    height: 180px; /* 1.2x desktop */
+  }
+
+  .logo-text {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .login-container {
+    max-width: 500px;
+    padding: 48px 20px; /* Reduced side padding (30px → 20px) */
+  }
+
+  .login-container h1 {
+    font-size: clamp(1.9rem, 4.5vw, 2.2rem); /* 1.2x desktop */
+  }
+
+  input {
+    padding: 18px;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 18px;
+    font-size: 1.2rem;
+    min-height: 58px;
+  }
+
+  .company-login-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 5px; /* Minimal side padding for clarity */
+  }
+
+  .logo {
+    margin-left: 0; /* Reset for column layout */
+    margin-right: 0; /* Reset for column layout */
+    margin-bottom: 30px;
+  }
+
+  .logo img {
+    height: 225px; /* 1.5x desktop */
+  }
+
+  .logo-text {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+
+  .login-container {
+    max-width: 100%;
+    padding: 60px 15px; /* Reduced side padding (30px → 15px) */
+  }
+
+  .login-container h1 {
+    font-size: clamp(2.1rem, 6vw, 2.4rem); /* 1.5x desktop */
+    margin-bottom: 30px;
+  }
+
+  input {
+    padding: 22.5px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 22.5px;
+    font-size: 1.5rem;
+    min-height: 72px;
+  }
+
+  .company-login-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Very Small Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px 3px; /* Ultra-minimal side padding */
+  }
+
+  .logo {
+    margin-left: 0; /* Reset for column layout */
+    margin-right: 0; /* Reset for column layout */
+    margin-bottom: 30px;
+  }
+
+  .logo img {
+    height: 180px;
+  }
+
+  .logo-text {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .login-container {
+    padding: 45px 10px; /* Reduced side padding (22.5px → 10px) */
+  }
+
+  .login-container h1 {
+    font-size: clamp(1.8rem, 5.5vw, 2.1rem);
+    margin-bottom: 24px;
+  }
+
+  input {
+    padding: 18px;
+    margin-bottom: 24px;
+    font-size: 1.35rem;
+  }
+
+  button {
+    padding: 18px;
+    font-size: 1.35rem;
+    min-height: 66px;
+  }
+
+  .company-login-link {
+    font-size: 1rem;
+  }
+}

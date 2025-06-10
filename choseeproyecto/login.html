@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="logo">
+        <img src="images/logo.svg" alt="Mi Logo">
+</div>
+<div class="login-container">
+  <h1>Iniciar Sesión</h1>
+  <form id="login-form" action="start.html">
+    <input type="email" id="email-input" name="email" placeholder="Correo electrónico" required>
+    <input type="password" id="password-input" name="password" placeholder="Contraseña" required>
+    <a href="start.html"><button type="submit">Entrar</button></a>
+    <a href="#" id="toggle-login-link" class="company-login-link">Ingresar como empresa</a>
+  </form>
+</div>
+
+<script>
+  // Handle toggle between user and company login
+  const toggleLink = document.getElementById('toggle-login-link');
+  const emailInput = document.getElementById('email-input');
+  const passwordInput = document.getElementById('password-input');
+  const loginForm = document.getElementById('login-form');
+  let isCompanyLogin = false;
+
+  toggleLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    isCompanyLogin = !isCompanyLogin; // Toggle the state
+
+    if (isCompanyLogin) {
+      // Switch to company login
+      emailInput.placeholder = 'Correo electrónico de la empresa';
+      toggleLink.textContent = '¿Tiene una cuenta de usuario? Ingresar como usuario';
+      loginForm.action = 'entprofile.html';
+    } else {
+      // Switch to user login
+      emailInput.placeholder = 'Correo electrónico';
+      toggleLink.textContent = '¿Tiene una cuenta de empresa? Ingresar como empresa';
+      loginForm.action = 'start.html';
+    }
+
+    // Clear inputs on toggle
+    emailInput.value = '';
+    passwordInput.value = '';
+  });
+</script>
+
+</body>
+</html>
